@@ -1,0 +1,123 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.linksSecundarios{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color : rgba(0, 0, 0, 0.705);
+    
+}
+
+.mio{
+    display: flex;
+    text-decoration: none;
+    color: rgb(165, 163, 163);
+    padding-top: 9px;
+    padding-left: 10px;
+    
+}
+.tarjeta2{
+    display: none;
+}
+.navegacionFooter{
+    display: flex;
+    background-color: rgb(19, 59, 71);
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.nav-listFooter{
+    display: flex;
+    justify-content: space-around;
+    width:  100%;
+
+}
+#barra2{
+    display: flex;
+    justify-content: space-between;
+    width:  100%;
+}
+.fo {
+    
+    display: flex;
+    justify-content: space-between;
+}
+.fo a{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color:white;
+}
+
+
+
+@media screen and (max-width: 771px){
+    .titulo{
+        display: flex;
+        flex-direction: colum;
+    }
+    .tarjeta1{
+        display: none;
+    }
+    .tarjeta2{
+        display: block;
+    }
+    
+    .nav-listFooter {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+ 
+
+}
+
+@media screen and (min-width: 770px ) {
+    
+    .tarjeta1{
+        display: block;
+    
+}
+
+.tarjetasRostros{
+    padding-left: 15rem; 
+    padding-right: 15rem;
+}
+ 
+.carousel-item img{
+    height: 50rem;
+   
+}
+
+
+
+.carousel-item p {
+    font-size: 25px;
+    color: white;
+    text-align: end;
+    
+}
+
+
+.carousel-item h2{
+    text-align: end;
+}
+
+form .btn{
+    width: 75%;
+
+}
+
+}
+
