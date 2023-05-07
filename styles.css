@@ -47,18 +47,21 @@
     justify-content: space-between;
     width:  100%;
 }
-.fo {
+.linkFooter {
     
     display: flex;
     justify-content: space-between;
 }
-.fo a{
+.linkFooter a{
     display: flex;
     justify-content: space-between;
     text-decoration: none;
     color:white;
 }
 
+.textoCarrusel{
+    display: none;
+}
 
 
 @media screen and (max-width: 771px){
@@ -75,11 +78,18 @@
     
     .nav-listFooter {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
         flex-wrap: wrap;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
- 
+    
+    .textoCarrusel{
+        display: block;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
 }
 
@@ -96,7 +106,7 @@
 }
  
 .carousel-item img{
-    height: 50rem;
+    height: 38vw;
    
 }
 
