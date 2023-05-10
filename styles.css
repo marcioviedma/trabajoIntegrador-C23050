@@ -59,6 +59,7 @@
     color:white;
 }
 
+
 .textoCarrusel{
     display: none;
 }
@@ -105,8 +106,7 @@
         filter: brightness(90%);
     }
     
-
-}
+   }
 
 @media screen and (min-width: 770px ) {
     
@@ -115,10 +115,7 @@
     
 }
 
-.tarjetasRostros{
-    padding-left: 15rem; 
-    padding-right: 15rem;
-}
+
  
 .carousel-item img{
     height: 38vw;
@@ -128,7 +125,7 @@
 
 
 .carousel-item p {
-    font-size: 25px;
+    font-size: 2vw;
     color: white;
     text-align: end;
     
@@ -142,6 +139,10 @@
 form .btn{
     width: 75%;
 
+}
+.tarjetasRostros{
+    padding-left: 5rem; 
+    padding-right: 5rem;
 }
 
 
