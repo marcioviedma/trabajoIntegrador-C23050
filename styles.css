@@ -31,7 +31,7 @@
 .navegacionFooter{
     display: flex;
     background-color: rgb(19, 59, 71);
-    padding-top: 30px;
+    padding-top: 10px;
     align-items: center;
     justify-content: center;
     
@@ -72,6 +72,28 @@
 }
 .logo{
     filter: brightness(100%);
+}
+form .total{
+    display: flex;
+    border-radius: 2%;
+    border: aliceblue;
+    width: 66vw;
+    margin-left: 11vw;
+    font-size: 23px;
+    border-color: aliceblue;
+   
+    
+}
+form .btnForm{
+    display: flex;
+    width: 57%;
+    justify-content: space-between;
+    margin-left: 21vw;
+}
+form .btnForm > .btn{
+    width: 27vw;
+    background-color: chartreuse;
+    
 }
 @media screen and (max-width: 771px){
     .titulo{
