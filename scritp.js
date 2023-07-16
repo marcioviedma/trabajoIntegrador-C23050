@@ -60,22 +60,18 @@ function captura(){
 */ 
 
 
- // Defino valor de ticket
+
 const valorTicket = 200;
 
-// Defino porcentajes de descuento según categoría
 let descuentoEstudiante = 80;
 let descuentoTrainee    = 50;
 let descuentoJunior     = 15;
-
-// Elementos en variables
 let nombre          = document.getElementById("nombre");
 let apellido        = document.getElementById("apellido");
 let mail            = document.getElementById("mail");
 let cantidadTickets = document.getElementById("cantidad");
 let categoria       = document.getElementById("categoria");
 
-// Función para quitar el estilo de error a los elementos del form
 function quitarClaseError() {
     let x = document.querySelectorAll(".form-control, .form-select");
     let i;
@@ -84,13 +80,10 @@ function quitarClaseError() {
     }
 }
 
-// Cálculo total a pagar
 function total_a_pagar() {
 
-    // Ejecuto función para que quite todos los estilos de error en los campos que los tuvieran
     quitarClaseError();
 
-    // Verifico si lleno los siguientes campos, sino que aplique un estilo de error, haga foco en el campo y se detenga
     if (nombre.value === "") {
         alert("Por favor, escribí tu nombre.");
         nombre.classList.add("is-invalid");
@@ -111,8 +104,6 @@ function total_a_pagar() {
         mail.focus();
         return;
     }
-
-    // Para determinar si el correo electrónico es válido o no
     const emailValido = mail => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);
     }
@@ -124,15 +115,12 @@ function total_a_pagar() {
         return;
     }
 
-    // Verifico si está ingresado al menos 1 ticket, sino que aplique un estilo de error, haga foco en el campo y se detenga
     if ( (cantidad.value == 0) || (isNaN(cantidad.value)) ) {
         alert("Por favor, ingresá correctamente cantidad de tickets.");
         cantidad.classList.add("is-invalid");
         cantidad.focus();
         return;
     }
-
-    // Verifico que haya seleccionado una categoría, sino que aplique un estilo de error, haga foco en el campo y se detenga
     if (categoria.value == "") {
         alert("Por favor, seleccioná una categoría.");
         categoria.classList.add("is-invalid");
@@ -140,10 +128,8 @@ function total_a_pagar() {
         return;
     }
 
-    // Multiplico cantidad de tickets por el valor
     let totalValorTickets = (cantidad.value) * valorTicket;
 
-    // Aplico descuentos según categoría
     if (categoria.value == 0) {
         totalValorTickets = totalValorTickets ;
     }
@@ -157,14 +143,11 @@ function total_a_pagar() {
         totalValorTickets = totalValorTickets - (descuentoJunior / 100 * totalValorTickets);
     }
 
-    // Inserto el valor en el HTML
     total.innerHTML = totalValorTickets;
 }
 
-// Botón Resumen recibe un escuchador y la funcion del cálculo
 btnResumen.addEventListener('click', total_a_pagar);
 
-// Función para el botón Borrar para que borre el valor
 function reset_total_a_pagar() {
     quitarClaseError();
     total.innerHTML = "";
