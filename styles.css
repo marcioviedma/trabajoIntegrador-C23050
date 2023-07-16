@@ -95,6 +95,8 @@ form .btnForm > .btn{
     background-color: chartreuse;
     
 }
+
+
 @media screen and (max-width: 771px){
     .titulo{
         display: flex;
